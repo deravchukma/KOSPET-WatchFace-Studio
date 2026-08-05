@@ -1,4 +1,105 @@
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
 [project]
-name='kwfs'
-version='0.1.0'
-requires-python='>=3.14'
+name = "kwfs"
+version = "0.1.0"
+description = "KOSPET WatchFace Studio - Explorer, Editor and Converter for KOSPET and Zepp watchfaces."
+readme = "README.md"
+requires-python = ">=3.14"
+license = { text = "MIT" }
+
+authors = [
+    { name = "KOSPET WatchFace Studio Contributors" }
+]
+
+keywords = [
+    "kospet",
+    "watchface",
+    "zepp",
+    "amazfit",
+    "editor",
+    "converter",
+    "watch",
+    "sdk"
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.14",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Utilities"
+]
+
+dependencies = [
+    "typer>=0.16.0",
+    "rich>=14.0.0",
+    "pillow>=11.3.0",
+    "orjson>=3.11.0"
+]
+
+[project.optional-dependencies]
+gui = [
+    "PySide6>=6.9.0"
+]
+
+dev = [
+    "pytest>=8.4.0",
+    "pytest-cov>=6.2.0",
+    "ruff>=0.12.0",
+    "black>=25.1.0",
+    "mypy>=1.17.0",
+    "pre-commit>=4.3.0"
+]
+
+[project.scripts]
+kwfs = "kospet_watchface_studio.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/kospet_watchface_studio"]
+
+[tool.black]
+line-length = 100
+target-version = ["py314"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "UP",
+    "B",
+    "SIM"
+]
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests"
+]
+
+pythonpath = [
+    "src"
+]
+
+[tool.mypy]
+python_version = "3.14"
+strict = true
+ignore_missing_imports = true
+
+[tool.coverage.run]
+source = [
+    "src/kwfs"
+]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
