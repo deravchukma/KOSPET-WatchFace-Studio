@@ -11,16 +11,12 @@ class KWFSError(Exception):
     """
 
 
-class InvalidPackageError(KWFSError):
-    """
-    The supplied archive is not a valid watchface package.
-    """
+class InvalidPackageError(Exception):
+    """Raised when a watchface package is invalid."""
 
 
-class UnsupportedPackageError(KWFSError):
-    """
-    Unsupported watchface package format.
-    """
+class UnsupportedPackageError(Exception):
+    """Raised when a package format is not supported."""
 
 
 class PackageNotFoundError(KWFSError):
@@ -29,10 +25,8 @@ class PackageNotFoundError(KWFSError):
     """
 
 
-class InvalidManifestError(KWFSError):
-    """
-    app.json is missing or invalid.
-    """
+class InvalidManifestError(Exception):
+    """Raised when app.json is invalid."""
 
 
 class ResourceNotFoundError(KWFSError):
