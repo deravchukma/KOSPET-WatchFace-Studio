@@ -1,3 +1,5 @@
-# KOSPET WatchFace Studio
+KOSPET WatchFace Studio
 
-Project skeleton.
+Open Source SDK для исследования, редактирования и конвертации циферблатов KOSPET и Zepp.
+
+Статус: Alpha
