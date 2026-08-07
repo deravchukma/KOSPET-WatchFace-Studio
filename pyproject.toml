@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "kwfs"
-version = "0.1.0"
+dynamic = ["version"]
 description = "KOSPET WatchFace Studio - Explorer, Editor and Converter for KOSPET and Zepp watchfaces."
 readme = "README.md"
 requires-python = ">=3.14"
@@ -78,7 +78,10 @@ select = [
     "I",
     "UP",
     "B",
-    "SIM"
+    "SIM",
+    "C4",
+    "RET",
+    "RUF",
 ]
 
 [tool.pytest.ini_options]
@@ -93,7 +96,10 @@ pythonpath = [
 [tool.mypy]
 python_version = "3.14"
 strict = true
-ignore_missing_imports = true
+warn_unused_configs = true
+pretty = true
+show_error_codes = true
+#ignore_missing_imports = true
 
 [tool.coverage.run]
 source = [
@@ -103,3 +109,11 @@ source = [
 [tool.coverage.report]
 show_missing = true
 skip_covered = true
+
+[tool.hatch.version]
+path = "src/kospet_watchface_studio/version.py"
+
+[project.urls]
+Homepage = "https://github.com/deravchukma/KOSPET-WatchFace-Studio"
+Repository = "https://github.com/deravchukma/KOSPET-WatchFace-Studio"
+Issues = "https://github.com/deravchukma/KOSPET-WatchFace-Studio/issues"
