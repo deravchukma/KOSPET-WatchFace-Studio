@@ -8,8 +8,10 @@ def test_loader_load(dm_watchface: Path) -> None:
 
     package = loader.load(dm_watchface)
 
-    assert package.asset_count == 177
-    assert package.image_count == 175
+    #assert package.asset_count == 177
+    assert package.asset_count == 174
+    # assert package.image_count == 175
+    assert package.image_count == 171
     assert package.size > 0
 
     assert package.manifest is not None

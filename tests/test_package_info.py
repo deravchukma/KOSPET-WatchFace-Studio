@@ -2,17 +2,29 @@ from pathlib import Path
 
 from kospet_watchface_studio.explorer.models import (
     ManifestInfo,
+    ManifestPlatform,
+    ManifestVersion,
     WatchfaceAsset,
     WatchfacePackageInfo,
 )
 
 
-def test_package():
+def test_package() -> None:
     manifest = ManifestInfo(
         id=1,
         name="Demo",
-        version="1.0.0",
-        resolution=(454, 454),
+        app_type="watchface",
+        version=ManifestVersion(
+            code=1,
+            name="1.0.0",
+        ),
+        design_width=454,
+        platforms=(
+            ManifestPlatform(
+                name="Amazfit T-Rex 2",
+                device_source=418,
+            ),
+        ),
     )
 
     assets = (
@@ -25,10 +37,9 @@ def test_package():
         path=Path("demo.zip"),
         manifest=manifest,
         assets=assets,
-        app_json=Path("app.json"),
-        app_js=Path("app.js"),
+        size=600,
     )
 
     assert package.asset_count == 3
     assert package.image_count == 2
-    assert package.total_size == 600
+    assert package.size == 600
