@@ -11,11 +11,11 @@ class KWFSError(Exception):
     """
 
 
-class InvalidPackageError(Exception):
+class InvalidPackageError(KWFSError):
     """Raised when a watchface package is invalid."""
 
 
-class UnsupportedPackageError(Exception):
+class UnsupportedPackageError(KWFSError):
     """Raised when a package format is not supported."""
 
 
@@ -25,7 +25,7 @@ class PackageNotFoundError(KWFSError):
     """
 
 
-class InvalidManifestError(Exception):
+class InvalidManifestError(KWFSError):
     """Raised when app.json is invalid."""
 
 
