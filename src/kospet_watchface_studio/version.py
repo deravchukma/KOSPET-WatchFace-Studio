@@ -28,10 +28,10 @@ VERSION: Final = VersionInfo(
     patch=0,
 )
 
+__version__: Final[str] = "0.1.0"
+
 __title__: Final[str] = "KOSPET WatchFace Studio"
 __package__: Final[str] = "kospet_watchface_studio"
-
-__version__: Final[str] = VERSION.text
 
 __author__: Final[str] = "KOSPET WatchFace Studio Contributors"
 

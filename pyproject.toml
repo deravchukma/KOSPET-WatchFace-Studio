@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "kwfs"
-dynamic = ["version"]
+version = "0.1.0"
 description = "KOSPET WatchFace Studio - Explorer, Editor and Converter for KOSPET and Zepp watchfaces."
 readme = "README.md"
 requires-python = ">=3.14"
@@ -110,8 +110,6 @@ source = [
 show_missing = true
 skip_covered = true
 
-[tool.hatch.version]
-path = "src/kospet_watchface_studio/version.py"
 
 [project.urls]
 Homepage = "https://github.com/deravchukma/KOSPET-WatchFace-Studio"
