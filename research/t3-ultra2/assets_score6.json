@@ -1,0 +1,323 @@
+{
+  "tool": {
+    "name": "extract_watchface_assets.py",
+    "version": "1.0",
+    "purpose": "Extract candidate raw assets from KOSPET T3 Ultra 2 BIN watchfaces."
+  },
+  "format_hypothesis": {
+    "container_header_size": 24,
+    "field_0x04": "file_size - 24",
+    "payload_offset": 24,
+    "primary_display": {
+      "width": 466,
+      "height": 466,
+      "known_candidate_offset": "0x0C"
+    }
+  },
+  "file_count": 4,
+  "files": [
+    {
+      "tool": {
+        "name": "extract_watchface_assets.py",
+        "version": "1.0"
+      },
+      "file": {
+        "path": "C:\\Project\\KOSPET-WatchFace-Studio\\examples\\t3_ultra2\\original_watchface.bin",
+        "name": "original_watchface.bin",
+        "size": 317538,
+        "sha256": "f8f188d6823ed87cf2f3da96e754ba7e1072eb7790210b02b3d5253a892e2343"
+      },
+      "container": {
+        "header_size_hypothesis": 24,
+        "file_size": 317538,
+        "field_0x00": 255621,
+        "field_0x04": 317514,
+        "field_0x08": 3807695837,
+        "field_0x04_plus_24": 317538,
+        "matches_file_size": true,
+        "payload_offset": 24,
+        "payload_size": 317514
+      },
+      "inspect_source": "binary_scan",
+      "primary_candidate": {
+        "offset": 12,
+        "width": 466,
+        "height": 466,
+        "score": 21,
+        "source": "binary_scan",
+        "confidence": "strong",
+        "area": 217156,
+        "remaining_bytes": 317526,
+        "possible_bpp": 1.0,
+        "possible_image_bytes": 217156,
+        "end_offset": 217168,
+        "in_payload": false,
+        "extracted": true,
+        "extracted_path": "research\\t3-ultra2\\assets_score6\\original_watchface\\candidates\\candidate_0001_466x466_s21_o00000C.bin",
+        "sha256": "b3b3b0d06166db526b2bf3f553bd298e3e4a309c739e912c1b9a4ecd3d344afa",
+        "extracted_bytes": 217156,
+        "extraction_note": "raw_candidate_1bpp"
+      },
+      "candidate_count": 1,
+      "extracted_count": 1,
+      "candidates": [
+        {
+          "offset": 12,
+          "width": 466,
+          "height": 466,
+          "score": 21,
+          "source": "binary_scan",
+          "confidence": "strong",
+          "area": 217156,
+          "remaining_bytes": 317526,
+          "possible_bpp": 1.0,
+          "possible_image_bytes": 217156,
+          "end_offset": 217168,
+          "in_payload": false,
+          "extracted": true,
+          "extracted_path": "research\\t3-ultra2\\assets_score6\\original_watchface\\candidates\\candidate_0001_466x466_s21_o00000C.bin",
+          "sha256": "b3b3b0d06166db526b2bf3f553bd298e3e4a309c739e912c1b9a4ecd3d344afa",
+          "extracted_bytes": 217156,
+          "extraction_note": "raw_candidate_1bpp"
+        }
+      ]
+    },
+    {
+      "tool": {
+        "name": "extract_watchface_assets.py",
+        "version": "1.0"
+      },
+      "file": {
+        "path": "C:\\Project\\KOSPET-WatchFace-Studio\\examples\\t3_ultra2\\watchface_02.bin",
+        "name": "watchface_02.bin",
+        "size": 293339,
+        "sha256": "e9e5a61630e4f2e1e6c54802c063b2d1f7769cb01856272f1f2e42ca8081fc40"
+      },
+      "container": {
+        "header_size_hypothesis": 24,
+        "file_size": 293339,
+        "field_0x00": 25122606,
+        "field_0x04": 293315,
+        "field_0x08": 4093477922,
+        "field_0x04_plus_24": 293339,
+        "matches_file_size": true,
+        "payload_offset": 24,
+        "payload_size": 293315
+      },
+      "inspect_source": "binary_scan",
+      "primary_candidate": {
+        "offset": 12,
+        "width": 466,
+        "height": 466,
+        "score": 21,
+        "source": "binary_scan",
+        "confidence": "strong",
+        "area": 217156,
+        "remaining_bytes": 293327,
+        "possible_bpp": 1.0,
+        "possible_image_bytes": 217156,
+        "end_offset": 217168,
+        "in_payload": false,
+        "extracted": true,
+        "extracted_path": "research\\t3-ultra2\\assets_score6\\watchface_02\\candidates\\candidate_0001_466x466_s21_o00000C.bin",
+        "sha256": "2b2e1e8635604661d31315a622569ed6ac5d68211abe6ed58035ca41b122ca5c",
+        "extracted_bytes": 217156,
+        "extraction_note": "raw_candidate_1bpp"
+      },
+      "candidate_count": 2,
+      "extracted_count": 1,
+      "candidates": [
+        {
+          "offset": 12,
+          "width": 466,
+          "height": 466,
+          "score": 21,
+          "source": "binary_scan",
+          "confidence": "strong",
+          "area": 217156,
+          "remaining_bytes": 293327,
+          "possible_bpp": 1.0,
+          "possible_image_bytes": 217156,
+          "end_offset": 217168,
+          "in_payload": false,
+          "extracted": true,
+          "extracted_path": "research\\t3-ultra2\\assets_score6\\watchface_02\\candidates\\candidate_0001_466x466_s21_o00000C.bin",
+          "sha256": "2b2e1e8635604661d31315a622569ed6ac5d68211abe6ed58035ca41b122ca5c",
+          "extracted_bytes": 217156,
+          "extraction_note": "raw_candidate_1bpp"
+        },
+        {
+          "offset": 148176,
+          "width": 466,
+          "height": 466,
+          "score": 16,
+          "source": "binary_scan",
+          "confidence": "medium",
+          "area": 217156,
+          "remaining_bytes": 145163,
+          "possible_bpp": null,
+          "possible_image_bytes": null,
+          "end_offset": null,
+          "in_payload": true,
+          "extracted": false,
+          "extracted_path": null,
+          "sha256": null,
+          "extracted_bytes": 0,
+          "extraction_note": "no_common_bpp_fits"
+        }
+      ]
+    },
+    {
+      "tool": {
+        "name": "extract_watchface_assets.py",
+        "version": "1.0"
+      },
+      "file": {
+        "path": "C:\\Project\\KOSPET-WatchFace-Studio\\examples\\t3_ultra2\\watchface_03.bin",
+        "name": "watchface_03.bin",
+        "size": 171500,
+        "sha256": "fa0831ceddeb96e9aecb86acf3ef166b8b3d861f577eb21be643b9d7d5c3aa54"
+      },
+      "container": {
+        "header_size_hypothesis": 24,
+        "file_size": 171500,
+        "field_0x00": 16488001,
+        "field_0x04": 171476,
+        "field_0x08": 2322294588,
+        "field_0x04_plus_24": 171500,
+        "matches_file_size": true,
+        "payload_offset": 24,
+        "payload_size": 171476
+      },
+      "inspect_source": "binary_scan",
+      "primary_candidate": {
+        "offset": 12,
+        "width": 466,
+        "height": 466,
+        "score": 21,
+        "source": "binary_scan",
+        "confidence": "strong",
+        "area": 217156,
+        "remaining_bytes": 171488,
+        "possible_bpp": null,
+        "possible_image_bytes": null,
+        "end_offset": null,
+        "in_payload": false,
+        "extracted": false,
+        "extracted_path": null,
+        "sha256": null,
+        "extracted_bytes": 0,
+        "extraction_note": "no_common_bpp_fits"
+      },
+      "candidate_count": 1,
+      "extracted_count": 0,
+      "candidates": [
+        {
+          "offset": 12,
+          "width": 466,
+          "height": 466,
+          "score": 21,
+          "source": "binary_scan",
+          "confidence": "strong",
+          "area": 217156,
+          "remaining_bytes": 171488,
+          "possible_bpp": null,
+          "possible_image_bytes": null,
+          "end_offset": null,
+          "in_payload": false,
+          "extracted": false,
+          "extracted_path": null,
+          "sha256": null,
+          "extracted_bytes": 0,
+          "extraction_note": "no_common_bpp_fits"
+        }
+      ]
+    },
+    {
+      "tool": {
+        "name": "extract_watchface_assets.py",
+        "version": "1.0"
+      },
+      "file": {
+        "path": "C:\\Project\\KOSPET-WatchFace-Studio\\examples\\t3_ultra2\\watchface_04.bin",
+        "name": "watchface_04.bin",
+        "size": 223072,
+        "sha256": "0a8c517449e86385781a00e263ce34dca3bc71171bddc4da781239141a3ca875"
+      },
+      "container": {
+        "header_size_hypothesis": 24,
+        "file_size": 223072,
+        "field_0x00": 9899001,
+        "field_0x04": 223048,
+        "field_0x08": 2426267552,
+        "field_0x04_plus_24": 223072,
+        "matches_file_size": true,
+        "payload_offset": 24,
+        "payload_size": 223048
+      },
+      "inspect_source": "binary_scan",
+      "primary_candidate": {
+        "offset": 12,
+        "width": 466,
+        "height": 466,
+        "score": 21,
+        "source": "binary_scan",
+        "confidence": "strong",
+        "area": 217156,
+        "remaining_bytes": 223060,
+        "possible_bpp": 1.0,
+        "possible_image_bytes": 217156,
+        "end_offset": 217168,
+        "in_payload": false,
+        "extracted": true,
+        "extracted_path": "research\\t3-ultra2\\assets_score6\\watchface_04\\candidates\\candidate_0001_466x466_s21_o00000C.bin",
+        "sha256": "ea3b38baee1a64ff4d849bd281119ec7018aa47e1d270a186e013728ce183fb3",
+        "extracted_bytes": 217156,
+        "extraction_note": "raw_candidate_1bpp"
+      },
+      "candidate_count": 2,
+      "extracted_count": 1,
+      "candidates": [
+        {
+          "offset": 12,
+          "width": 466,
+          "height": 466,
+          "score": 21,
+          "source": "binary_scan",
+          "confidence": "strong",
+          "area": 217156,
+          "remaining_bytes": 223060,
+          "possible_bpp": 1.0,
+          "possible_image_bytes": 217156,
+          "end_offset": 217168,
+          "in_payload": false,
+          "extracted": true,
+          "extracted_path": "research\\t3-ultra2\\assets_score6\\watchface_04\\candidates\\candidate_0001_466x466_s21_o00000C.bin",
+          "sha256": "ea3b38baee1a64ff4d849bd281119ec7018aa47e1d270a186e013728ce183fb3",
+          "extracted_bytes": 217156,
+          "extraction_note": "raw_candidate_1bpp"
+        },
+        {
+          "offset": 81164,
+          "width": 466,
+          "height": 466,
+          "score": 16,
+          "source": "binary_scan",
+          "confidence": "medium",
+          "area": 217156,
+          "remaining_bytes": 141908,
+          "possible_bpp": null,
+          "possible_image_bytes": null,
+          "end_offset": null,
+          "in_payload": true,
+          "extracted": false,
+          "extracted_path": null,
+          "sha256": null,
+          "extracted_bytes": 0,
+          "extraction_note": "no_common_bpp_fits"
+        }
+      ]
+    }
+  ],
+  "output_directory": "C:\\Project\\KOSPET-WatchFace-Studio\\research\\t3-ultra2\\assets_score6"
+}
